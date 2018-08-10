@@ -8,7 +8,7 @@ require("./models/User");
 const passportConfig = require("./services/passport");
 const authRoutes = require("./routes/authRoutes");
 const billingRoute = require("./routes/billingRoutes");
-
+require("./models/Survey");
 mongoose.Promise = global.Promise;
 const app = express();
 //midleware for body parser
