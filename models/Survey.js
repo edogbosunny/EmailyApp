@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const { Schema } = mongoose;
 const RecipientSchema = require("./Recipient");
 // or
 //const { Schema } = mongoose;
 
-const surverSchema = new Schema({
+const surveySchema = new Schema({
   title: String,
   body: String,
   subject: String,
@@ -16,4 +16,4 @@ const surverSchema = new Schema({
   lastResponded: Date
 });
 
-mongoose.model("surveys", surverSchema);
+module.exports = mongoose.model("surveys", surveySchema);

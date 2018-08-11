@@ -5,11 +5,12 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 const keys = require("./config/keys");
 require("./models/User");
+require("./models/Survey");
 const passportConfig = require("./services/passport");
 const authRoutes = require("./routes/authRoutes");
 const billingRoute = require("./routes/billingRoutes");
 const surveyRoute = require("./routes/surveyRoutes");
-require("./models/Survey");
+
 mongoose.Promise = global.Promise;
 const app = express();
 //midleware for body parser
